@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@drawable/gradient">
+
+  <com.qrcodereader.camera.CameraSourcePreview
+      android:id="@+id/preview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.qrcodereader.camera.GraphicOverlay
+        android:id="@+id/graphicOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  </com.qrcodereader.camera.CameraSourcePreview>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginBottom="8dp"
+      android:text="Tap on camera to capture image.\n Pinch/Stretch to zoom"
+      app:layout_constraintBottom_toBottomOf="@+id/preview"
+      android:gravity="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
